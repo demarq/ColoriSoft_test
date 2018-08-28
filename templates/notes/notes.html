@@ -1,0 +1,15 @@
+{% extends 'notes/base.html' %}
+{% load static %}
+
+{% block content %}
+    {% for note in notes %}
+        <div class="notewraper">
+            <div class="notehead">
+                {{ note.title }}
+            </div>
+            <div class="notebody">
+                {{ note.text }}
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

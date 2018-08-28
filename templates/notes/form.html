@@ -1,0 +1,9 @@
+{% block form %}
+    <div class="formwraper">
+        <form class="addnoteform" method="POST" action="{% url 'notes' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input class="submitbutton" type="submit" value="Отправить">
+        </form>
+    </div>
+{% endblock %}
